@@ -1,0 +1,28 @@
+# Term colors
+set -g default-terminal "screen-256color"
+set -ga terminal-overrides ",*256col*:Tc"
+
+# Enable mouse
+set -g mouse on
+
+# Status bar content
+set -g @nord_tmux_show_status_content "0"
+set -g status-right "#{prefix_highlight}#[fg=yellow]#[fg=black,bg=yellow] %H:%M  %d %b "
+
+# Key bindings
+bind | split-window -h -c "#{pane_current_path}"
+bind - split-window -v -c "#{pane_current_path}"
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @plugin 'tmux-plugins/tmux-prefix-highlight'
+
+# Color theme
+set -g @plugin "arcticicestudio/nord-tmux"
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+if "test ! -d ~/.tmux/plugins/tpm" \
+   "run 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins'"
+run -b '~/.tmux/plugins/tpm/tpm'
