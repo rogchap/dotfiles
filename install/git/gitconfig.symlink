@@ -1,0 +1,9 @@
+[user]
+    name = Roger Chapman
+    email = rogchap@gmail.com
+[core]
+    excludesfile = ~/.gitignore_global
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/
+[push]
+    default = current
