@@ -16,6 +16,9 @@ test -e "$HOME/.private.zsh" && source "$HOME/.private.zsh"
 # iterm integration config
 test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
+# vim colors
+export TERM='xterm-256color'
+
 # VIM Mode
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down

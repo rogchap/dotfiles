@@ -16,13 +16,7 @@ set cursorline
 set ttimeoutlen=0
 set showcmd
 set cmdheight=2
-
-" true colors
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
+set nocompatible
 
 " show line numbers
 set number
@@ -134,3 +128,8 @@ inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
+
+imap <ESC>oA <Nop>
+imap <ESC>oB <Nop>
+imap <ESC>oC <Nop>
+imap <ESC>oD <Nop>

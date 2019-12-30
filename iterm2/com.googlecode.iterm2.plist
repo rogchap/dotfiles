@@ -4,6 +4,8 @@
 <dict>
 	<key>AdjustWindowForFontSizeChange</key>
 	<false/>
+	<key>AllowClipboardAccess</key>
+	<true/>
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -1552,6 +1554,10 @@
 	<string>3607CA63-B4BF-4D05-BB16-EB964BFAAED7</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
 	<integer>26</integer>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>587577703.83372498</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
