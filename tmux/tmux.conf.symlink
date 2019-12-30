@@ -2,6 +2,9 @@
 set -g default-terminal "xterm-256color"
 set -g xterm-keys on
 
+# Don't wait for escape chars
+set -s escape-time 0
+
 # Enable mouse
 set -g mouse on
 
