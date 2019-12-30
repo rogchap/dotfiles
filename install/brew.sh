@@ -35,6 +35,9 @@ brew install tmux                   # terminal multiplexer
 brew install vim                    # text/code editor that rocks
 brew install zsh                    # the only shell you need
 
+# configuration for zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 pip3 install pynvim                 # required for fzf.vim plugin
 
 echo "Installing casks..."
