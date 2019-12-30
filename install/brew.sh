@@ -48,6 +48,3 @@ brew cask install spotify           # music client
 
 echo "Cleanup..."
 brew cleanup
-brew cask cleanup
-
-exit 0

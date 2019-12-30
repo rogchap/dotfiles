@@ -13,5 +13,3 @@ for f in $links; do
         ln -s $f $t
     fi 
 done
-
-exit 0
