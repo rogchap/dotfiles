@@ -2,8 +2,12 @@
 
 echo "installing dotfiles..."
 
-source ./install/link.sh
+echo "initializing submodule(s)"
+git submodule update --init --recursive --jobs 8
+
 source ./install/brew.sh
+source ./install/link.sh
+source ./install/linkdirs.sh
 
 echo "configuring zsh as default shell..."
 chsh -s $(which zsh)
