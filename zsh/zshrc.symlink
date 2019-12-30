@@ -1,0 +1,42 @@
+# path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# theme
+ZSH_THEME="robbyrussell"
+
+# Plugins to load
+plugins=(vi-mode git golang history-substring-search)
+
+# setup oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+# private config
+test -e "$HOME/.private.zsh" && source "$HOME/.private.zsh"
+
+# iterm integration config
+test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
+
+# VIM Mode
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
+function zle-line-init zle-keymap-select {
+    VIM_PROMPT="%{$fg_bold[blue]%} [% NORMAL]%  %{$reset_color%}"
+    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+    zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+export KEYTIMEOUT=1
+
+# aliases
+alias t="tmux"
+alias tn="tmux new -s"
+alias ta="tmux attach"
+
+alias v="vim"
+
+export PATH=$GOPATH/bin:$PATH
