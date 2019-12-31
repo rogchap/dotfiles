@@ -16,6 +16,7 @@ set cursorline
 set ttimeoutlen=0
 set cmdheight=2
 set nocompatible
+set autoread
 
 " show line numbers
 set number
