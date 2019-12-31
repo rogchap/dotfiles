@@ -36,6 +36,9 @@ defaults write com.apple.finder ShowStatusBar -bool true
 echo "Dock: automatically hide and show"
 defaults write com.apple.dock autohide -bool true
 
+echo "Dock: orientation to the right"
+defaults write com.apple.dock orientation -string right
+
 echo "iTerm2: specify the preferences directory"
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"
 
