@@ -14,7 +14,6 @@ set pyxversion=3
 set autowrite
 set cursorline
 set ttimeoutlen=0
-set showcmd
 set cmdheight=2
 set nocompatible
 
@@ -96,6 +95,7 @@ let g:go_template_autocreate = 0
 let g:go_template_use_pkg = 1
 let g:go_decls_mode = 'fzf'
 nnoremap <Leader><CR> :GoDef<CR>
+nnoremap <Leader>r :GoRun<CR>
 nnoremap <Leader>a :GoAlternate<CR>
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 
@@ -133,3 +133,6 @@ imap <ESC>oA <Nop>
 imap <ESC>oB <Nop>
 imap <ESC>oC <Nop>
 imap <ESC>oD <Nop>
+
+" placing at the EOF so it does not get overriden
+set showcmd
