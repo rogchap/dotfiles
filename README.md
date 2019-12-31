@@ -1,5 +1,7 @@
 # rogchap dotfiles
 
+![screenshot](screenshot.png)
+
 ## Usage
 
 ```zsh
