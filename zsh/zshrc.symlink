@@ -1,6 +1,11 @@
 # path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# filesystem navigation
+export APP="/Applications"
+export DEV="$HOME/Development"
+export DF="$HOME/dotfiles"
+
 # theme
 ZSH_THEME="robbyrussell"
 
@@ -37,11 +42,17 @@ zle -N zle-keymap-select
 export KEYTIMEOUT=1
 
 # aliases
+alias reload!='source ~/.zshrc'
+
 alias t="tmux"
-alias tn="tmux new -s"
+alias tn="tmux new-session -s"
 alias ta="tmux attach"
 alias ide="tmux split-window -h -d -p 66 'vim; zsh'; tmux split-window -v; tmux rename-window code; tmux select-pane -t 2"
 
 alias v="vim"
+
+alias firefox="open -a $APP/firefox.app"
+alias spotify="open -a $APP/spotify.app"
+alias slack="open -a $APP/slack.app"
 
 export PATH=$GOPATH/bin:$PATH

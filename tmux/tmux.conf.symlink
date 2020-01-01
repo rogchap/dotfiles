@@ -1,9 +1,12 @@
+# set prefix key
+set -g prefix C-a
+
 # Term colors
 set -g default-terminal "xterm-256color"
 set -g xterm-keys on
 
 # Don't wait for escape chars
-set -s escape-time 0
+set -sg escape-time 0
 
 # Enable mouse
 set -g mouse on
@@ -14,7 +17,7 @@ set -g @prefix_highlight_output_suffix ""
 set -g @prefix_highlight_copy_mode_attr "fg=brightcyan,bg=black,bold"
 
 # Status bar content
-set status-left-length 40
+set -g status-left-length 40
 set -g @nord_tmux_show_status_content "0"
 set -g status-left "#[fg=black,bg=blue,bold] #S #[fg=blue,bg=black,nobold,noitalics,nounderscore]"
 set -g status-right "#{prefix_highlight}#[fg=brightblack,bg=black]#[fg=white,bg=brightblack]#{cpu_fg_color} #{cpu_icon} #{cpu_percentage} #[fg=black,bg=brightblack]#[fg=yellow,bg=black]#[fg=black,bg=yellow] %H:%M  %d %b "
