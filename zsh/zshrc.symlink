@@ -16,8 +16,9 @@ test -e "$HOME/.private.zsh" && source "$HOME/.private.zsh"
 # iterm integration config
 test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
-# vim colors
+# vim editor
 export TERM='xterm-256color'
+export EDITOR='vim'
 
 # VIM Mode
 bindkey '^[[A' history-substring-search-up
@@ -39,6 +40,7 @@ export KEYTIMEOUT=1
 alias t="tmux"
 alias tn="tmux new -s"
 alias ta="tmux attach"
+alias ide="tmux split-window -h -d -p 66 'vim; zsh'; tmux split-window -v; tmux rename-window code; tmux select-pane -t 2"
 
 alias v="vim"
 
