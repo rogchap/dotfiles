@@ -17,6 +17,11 @@ set cmdheight=2
 set nocompatible
 set autoread
 
+" remove delay for escape in insert mode
+autocmd InsertEnter * set timeoutlen=0
+autocmd InsertLeave * set timeoutlen=1000
+set ttimeoutlen=0
+
 " show line numbers
 set number
 augroup numbertoggle
@@ -136,5 +141,3 @@ imap <ESC>oD <Nop>
 
 " placing at the EOF so it does not get overriden
 set showcmd
-set timeoutlen=200
-set ttimeoutlen=0
