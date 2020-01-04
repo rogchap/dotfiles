@@ -34,6 +34,7 @@ brew install the_silver_searcher    # code searching tool
 brew install tmux                   # terminal multiplexer
 brew install vim                    # text/code editor that rocks
 brew install zsh                    # the only shell you need
+brew install grip                   # preview github flavoured markdown
 
 # configuration for zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

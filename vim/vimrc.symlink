@@ -120,6 +120,30 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+" markdown preview with grip
+function! StartMarkdownPreview() abort
+    call StopMarkdownPreview()
+    let s:markdown_job_id = job_start(
+        \ "/bin/zsh -c \"grip -b ". shellescape(expand('%:p')) . " 0 2>&1 | awk '/Running/ { print \\$4 }'\"",
+        \ { 'out_cb': 'OnGripStart', 'pty': 1 })
+    function! OnGripStart(_, output)
+        echo "grip " . a:output
+    endfunction
+endfunction
+command MarkdownPreview call StartMarkdownPreview()
+
+function! StopMarkdownPreview() abort
+    if exists('s:markdown_job_id')
+        call job_stop(s:markdown_job_id)
+        unlet s:markdown_job_id
+    endif
+endfunction
+command MarkdownStopPreview call StopMarkdownPreview()
+augroup markdown_preview
+    autocmd!
+    autocmd BufLeave * call StopMarkdownPreview()
+augroup END
+
 " shortcut to open the previous file
 nnoremap <Leader><Leader> :e#<CR>
 
