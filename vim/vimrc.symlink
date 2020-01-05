@@ -16,6 +16,7 @@ set cursorline
 set cmdheight=2
 set nocompatible
 set autoread
+set signcolumn=yes
 
 " remove delay for escape in insert mode
 autocmd InsertEnter * set timeoutlen=0
