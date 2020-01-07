@@ -3,7 +3,7 @@ func! local#notes#create(...)
     if len(a:000) > 0
         let l:sep = '-'
     endif
-    let l:fname = expand('~/notes/') . strftime("%F-%H%M") . l:sep . tolower(join(a:000, '-')) . '.md'
+    let l:fname = expand('~/Dropbox/notes/') . strftime("%F-%H%M") . l:sep . tolower(join(a:000, '-')) . '.md'
     exec "e " . l:fname
 
     let l:header = "normal ggO---\<cr>"
