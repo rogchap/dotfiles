@@ -7,7 +7,6 @@ set encoding=utf-8
 set fileencoding=utf-8
 set exrc
 set secure
-set undodir=~/.vim/undodir
 set undofile
 set clipboard+=unnamed
 set pyxversion=3
@@ -17,6 +16,12 @@ set cmdheight=2
 set nocompatible
 set autoread
 set signcolumn=yes
+
+" redirect temp files
+set undodir=~/.vim/undodir
+set backupdir=~/.vim/backupdir
+set directory=~/.vim/directory
+
 
 " remove delay for escape in insert mode
 autocmd InsertEnter * set timeoutlen=0
