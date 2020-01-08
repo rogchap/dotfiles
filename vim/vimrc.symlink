@@ -22,7 +22,6 @@ set undodir=~/.vim/undodir
 set backupdir=~/.vim/backupdir
 set directory=~/.vim/directory
 
-
 " remove delay for escape in insert mode
 autocmd InsertEnter * set timeoutlen=0
 autocmd InsertLeave * set timeoutlen=1000
@@ -128,6 +127,9 @@ set complete=.,w,b,u,t,i,kspell
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" text wrap for markdown
+au BufRead,BufNewFile *.md setlocal textwidth=120
 
 " markdown preview with grip
 function! StartMarkdownPreview() abort
