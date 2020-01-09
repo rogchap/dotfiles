@@ -12,5 +12,4 @@ func! local#notes#create(...)
     endif
     let l:header = l:header . "date: \"\<c-r>=strftime('%a %d %b %Y %X %Z')\<cr>\"\<cr>---\<cr>\<esc>G"
     exec l:header
-
 endfunc
