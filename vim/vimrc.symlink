@@ -22,7 +22,6 @@ set undodir=~/.vim/undodir
 set backupdir=~/.vim/backupdir
 set directory=~/.vim/directory
 
-
 " remove delay for escape in insert mode
 autocmd InsertEnter * set timeoutlen=0
 autocmd InsertLeave * set timeoutlen=1000
@@ -121,10 +120,16 @@ inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
 
+" spell checking completion
+set complete=.,w,b,u,t,i,kspell
+
 " Set ultisnips triggers
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" text wrap for markdown
+au BufRead,BufNewFile *.md setlocal textwidth=120
 
 " smooth scrolling
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
