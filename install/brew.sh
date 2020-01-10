@@ -29,6 +29,7 @@ brew install ranger                 # file manager
 echo "Installing development tools..."
 brew install git                    # keep git updated with homebrew
 brew install go                     # Go programing language
+brew install node                   # Node.js and npm
 brew install python                 # Python 3 and pip
 brew install the_silver_searcher    # code searching tool
 brew install tmux                   # terminal multiplexer
@@ -46,6 +47,9 @@ brew cask install firefox           # internet browser
 brew cask install iterm2            # terminal emulator
 brew cask install slack             # messaging client
 brew cask install spotify           # music client
+brew cask install docker 	        # *nix containers
+brew cask install 1password	        # password manager
+brew cask install dropbox           # shared files
 
 echo "Cleanup..."
 brew cleanup

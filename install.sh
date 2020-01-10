@@ -5,8 +5,8 @@ echo "installing dotfiles..."
 echo "initializing submodule(s)"
 git submodule update --init --recursive --jobs 8
 
-source ./install/brew.sh
 source ./install/link.sh
+source ./install/brew.sh
 source ./install/linkdirs.sh
 source ./install/osx.sh
 source ./install/fonts.sh
