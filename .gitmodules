@@ -43,3 +43,6 @@
 [submodule "vim/pack/plugins/start/vim-smooth-scroll"]
 	path = vim/pack/plugins/start/vim-smooth-scroll
 	url = https://github.com/terryma/vim-smooth-scroll.git
+[submodule "vim/pack/plugins/start/vim-cool"]
+	path = vim/pack/plugins/start/vim-cool
+	url = https://github.com/romainl/vim-cool.git

@@ -59,16 +59,16 @@ set autoindent
 
 " highlight words when searching
 set hlsearch
+let g:CoolTotalMatches = 1
+" escape search highlight
+nnoremap <esc> :noh<return><esc>
+" needed so that vim still understands escape sequences
+nnoremap <esc>^[ <esc>^[
 
 " lightline setting
 set laststatus=2
 set noshowmode
 let g:lightline = { 'colorscheme': 'nord' }
-
-" escape search highlight
-nnoremap <esc> :noh<return><esc>
-" needed so that vim still understands escape sequences
-nnoremap <esc>^[ <esc>^[
 
 set rtp+=/usr/local/opt/fzf
 nnoremap <Leader>t :FZF<CR>
