@@ -24,7 +24,8 @@ brew install gotop                  # graphical activity monitor
 brew install htop                   # process viewer
 brew install lazygit                # UI for git
 brew install neofetch               # for unixporn
-brew install ranger                 # file manager
+brew install lf                     # file manager
+brew install cmatrix                # just for fun 
 
 echo "Installing development tools..."
 brew install git                    # keep git updated with homebrew
@@ -50,6 +51,7 @@ brew cask install spotify           # music client
 brew cask install docker 	        # *nix containers
 brew cask install 1password	        # password manager
 brew cask install dropbox           # shared files
+brew cask install aerial            # screensaver
 
 echo "Cleanup..."
 brew cleanup
