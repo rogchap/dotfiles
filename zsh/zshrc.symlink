@@ -33,7 +33,7 @@ bindkey -M vicmd 'j' history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
 function zle-line-init zle-keymap-select {
-    VIM_PROMPT="%{$fg_bold[blue]%} [% NORMAL]%  %{$reset_color%}"
+    VIM_PROMPT="%{$fg_bold[cyan]%} [% NORMAL]%  %{$reset_color%}"
     RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
     zle reset-prompt
 }
@@ -60,4 +60,5 @@ alias firefox="open -a $APP/firefox.app"
 alias spotify="open -a $APP/spotify.app"
 alias slack="open -a $APP/slack.app"
 
+export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
