@@ -1,4 +1,4 @@
-" basic setings
+" basic settings
 filetype plugin indent on
 syntax on
 set colorcolumn=120
