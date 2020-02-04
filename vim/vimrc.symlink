@@ -82,6 +82,7 @@ set laststatus=2
 set noshowmode
 let g:lightline = { 'colorscheme': 'nord' }
 
+" fuzzy finding
 set rtp+=/usr/local/opt/fzf
 nnoremap <Leader>t :FZF<CR>
 let g:fzf_colors =
@@ -103,7 +104,8 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 let g:ackprg = 'ag --vimgrep'
 nnoremap <Leader>f :Ag<CR>
 command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview({ 'options': ['--color', 'hl:243,hl+:197'] },'right:50%', '?'), <bang>0)
+  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview({ 'options': [] },'right:50%', '?'), <bang>0)
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'highlight': 'String', 'rounded': v:false } }
 
 " vim-go settings
 let g:go_fmt_command = "goimports"
@@ -142,6 +144,9 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " text wrap for markdown
 au BufRead,BufNewFile *.md setlocal textwidth=120
+
+" debugger key mappings
+let g:vimspector_enable_mappings = 'HUMAN'
 
 " smooth scrolling
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
