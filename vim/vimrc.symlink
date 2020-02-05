@@ -23,8 +23,11 @@ set backupdir=~/.vim/backupdir
 set directory=~/.vim/directory
 
 " remove delay for escape in insert mode
-autocmd InsertEnter * set timeoutlen=0
-autocmd InsertLeave * set timeoutlen=1000
+augroup escape
+    autocmd!
+    autocmd InsertEnter * set timeoutlen=0
+    autocmd InsertLeave * set timeoutlen=1000
+augroup END
 set ttimeoutlen=0
 
 " show line numbers
