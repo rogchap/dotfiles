@@ -2,11 +2,12 @@
 set -g prefix C-a
 
 # Term colors
-set -g default-terminal "xterm-256color"
+set -s default-terminal xterm-256color
+set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
 set -g xterm-keys on
 
 # Don't wait for escape chars
-set -sg escape-time 0
+set -s escape-time 10
 
 # Enable mouse
 set -g mouse on
