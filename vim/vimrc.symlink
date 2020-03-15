@@ -17,6 +17,12 @@ set nocompatible
 set autoread
 set signcolumn=yes
 
+" folding
+set foldmethod=indent
+set foldcolumn=1
+set nofoldenable
+au BufRead * normal zR
+
 " redirect temp files
 set undodir=~/.vim/undodir
 set backupdir=~/.vim/backupdir
