@@ -45,7 +45,7 @@ pip3 install pynvim                 # required for fzf.vim plugin
 
 echo "Installing casks..."
 brew cask install firefox           # internet browser
-brew cask install iterm2            # terminal emulator
+brew cask install kitty             # terminal emulator
 brew cask install slack             # messaging client
 brew cask install spotify           # music client
 brew cask install docker 	        # *nix containers
