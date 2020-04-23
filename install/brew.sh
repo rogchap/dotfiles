@@ -37,6 +37,7 @@ brew install tmux                   # terminal multiplexer
 brew install vim                    # text/code editor that rocks
 brew install zsh                    # the only shell you need
 brew install grip                   # preview github flavoured markdown
+brew install github/gh/gh           # GitHub CLI
 
 # configuration for zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -45,7 +46,7 @@ pip3 install pynvim                 # required for fzf.vim plugin
 
 echo "Installing casks..."
 brew cask install firefox           # internet browser
-brew cask install iterm2            # terminal emulator
+brew cask install kitty             # terminal emulator
 brew cask install slack             # messaging client
 brew cask install spotify           # music client
 brew cask install docker 	        # *nix containers
