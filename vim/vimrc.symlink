@@ -112,7 +112,8 @@ let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'highlight': 'Stri
 " vim-go settings
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
-let g:go_metalinter_command='golangci-lint'
+let g:go_metalinter_command='gopls'
+let g:go_rename_command ='gopls'
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 let g:go_gopls_complete_unimported = 1
