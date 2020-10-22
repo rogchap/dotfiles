@@ -59,7 +59,7 @@ function chpwd() {
 alias reload!='source ~/.zshrc'
 
 alias t="tmux"
-alias tn='tmux new-session -s ${PWD##*/}'
+alias tn='tmux new-session -s ${${PWD##*/}:gs/\./-}'
 alias ta="tmux attach"
 alias ide="tmux split-window -h -d -p 66 'vim; zsh'; tmux split-window -v; tmux rename-window code; tmux select-pane -t 2"
 
