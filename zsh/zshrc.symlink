@@ -63,6 +63,10 @@ alias tn='tmux new-session -s ${${PWD##*/}:gs/\./-}'
 alias ta="tmux attach"
 alias ide="tmux split-window -h -d -p 66 'vim; zsh'; tmux split-window -v; tmux rename-window code; tmux select-pane -t 2"
 
+alias g="git"
+alias gm="git checkout master && git pull"
+alias gn="git checkout -b"
+
 alias v="vim"
 
 alias firefox="open -a $APP/firefox.app"
