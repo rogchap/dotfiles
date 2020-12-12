@@ -1,9 +1,6 @@
 [submodule "vim/pack/plugins/start/lightline"]
 	path = vim/pack/plugins/start/lightline
 	url = https://github.com/itchyny/lightline.vim
-[submodule "vim/pack/plugins/start/supertab"]
-	path = vim/pack/plugins/start/supertab
-	url = https://github.com/ervandew/supertab.git
 [submodule "vim/pack/plugins/start/vim-go"]
 	path = vim/pack/plugins/start/vim-go
 	url = https://github.com/fatih/vim-go.git
@@ -13,15 +10,9 @@
 [submodule "vim/pack/plugins/start/vim-fugitive"]
 	path = vim/pack/plugins/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim/pack/plugins/start/deoplete.nvim"]
-	path = vim/pack/plugins/start/deoplete.nvim
-	url = https://github.com/Shougo/deoplete.nvim.git
 [submodule "vim/pack/plugins/start/nvim-yarp"]
 	path = vim/pack/plugins/start/nvim-yarp
 	url = https://github.com/roxma/nvim-yarp.git
-[submodule "vim/pack/plugins/start/vim-hug-neovim-rpc"]
-	path = vim/pack/plugins/start/vim-hug-neovim-rpc
-	url = https://github.com/roxma/vim-hug-neovim-rpc.git
 [submodule "vim/pack/plugins/start/ack.vim"]
 	path = vim/pack/plugins/start/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
@@ -52,3 +43,6 @@
 [submodule "vim/pack/plugins/start/vim-svelte-plugin"]
 	path = vim/pack/plugins/start/vim-svelte-plugin
 	url = https://github.com/leafOfTree/vim-svelte-plugin
+[submodule "vim/pack/plugins/start/coc.nvim"]
+	path = vim/pack/plugins/start/coc.nvim
+	url = https://github.com/neoclide/coc.nvim.git

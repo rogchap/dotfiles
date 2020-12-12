@@ -14,6 +14,8 @@ endfunc
 func! local#sessions#load()
     let l:file = expand("~/.vim/sessions/") . trim(system("md5 -qs " . getcwd())) . ".vim"
     if filereadable(l:file)
+        sleep 100m
         exec "source " l:file
+        call lightline#init()
     endif
 endfunc

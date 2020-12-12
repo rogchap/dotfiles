@@ -110,41 +110,54 @@ command! -bang -nargs=* Ag
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'highlight': 'String', 'rounded': v:false } }
 
 " vim-go settings
-let g:go_fmt_command = "goimports"
-let g:go_auto_type_info = 1
-let g:go_imports_mode = "gopls"
-let g:go_metalinter_command='gopls'
-let g:go_rename_command ='gopls'
-let g:go_def_mode='gopls'
-let g:go_info_mode='gopls'
-let g:go_gopls_complete_unimported = 1
-let g:go_gopls_use_placeholders = 1
+
+let g:go_gopls_enabled = 0
+let g:go_imports_cmd = 'gopls'
+let g:go_gopls_options=['-remote=auto']
+let g:go_imports_autosave = 1
+let g:go_auto_type_info = 0
 let g:go_template_autocreate = 0
 let g:go_template_use_pkg = 1
 let g:go_decls_mode = 'fzf'
-nnoremap <Leader><CR> :GoDef<CR>
-nnoremap <Leader>r :GoRun<CR>
+let g:go_def_mapping_enabled = 0
+nnoremap <Leader>b :GoBuild<CR>
 nnoremap <Leader>a :GoAlternate<CR>
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 
-" onmicomplete settings
-set completeopt=menuone,noinsert
-" shortcut to bring up omnicomplete
-imap <C-@> <C-Space>
-imap <C-Space> <C-x><C-o>
-let g:deoplete#enable_at_startup = 1
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
-inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
+" coc.nvim settings
+set nobackup
+set nowritebackup
+set shortmess+=c
+imap <c-@> <c-space>
+inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+nmap <leader><cr> <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <leader>rn <Plug>(coc-rename)
+
+autocmd CursorHold * silent call CocActionAsync('doHover')
+
+" autocmd BufWritePre *.go silent call CocAction('runCommand', 'editor.action.organizeImport')
 
 " spell checking completion
 set complete=.,w,b,u,t,i,kspell
 
-" Set ultisnips triggers
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" snippets
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
 
 " text wrap for markdown
 au BufRead,BufNewFile *.md setlocal textwidth=120
