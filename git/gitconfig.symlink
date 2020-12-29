@@ -1,6 +1,7 @@
 [user]
     name = Roger Chapman
     email = rogchap@gmail.com
+	signingkey = FF4EF1E2D1D0BF18
 [core]
     excludesfile = ~/.gitignore_global
 [url "ssh://git@github.com/"]
@@ -9,3 +10,7 @@
     default = current
 [pull]
 	rebase = false
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg

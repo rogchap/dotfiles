@@ -20,7 +20,6 @@ brew install clang-format           # format C/C++ and protobuf files
 brew install cmake                  # cross platform build system
 brew install ctag                   # index lang objects for vim
 brew install fzf                    # fuzzy searching
-brew install gotop                  # graphical activity monitor
 brew install htop                   # process viewer
 brew install lazygit                # UI for git
 brew install neofetch               # for unixporn
@@ -38,6 +37,8 @@ brew install vim                    # text/code editor that rocks
 brew install zsh                    # the only shell you need
 brew install grip                   # preview github flavoured markdown
 brew install github/gh/gh           # GitHub CLI
+brew install gnupg                  # Privacy Guard
+brew install pinentry-mac           # Secure PIN entry for PGP
 
 # configuration for zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -53,6 +54,7 @@ brew cask install docker 	        # *nix containers
 brew cask install 1password	        # password manager
 brew cask install dropbox           # shared files
 brew cask install aerial            # screensaver
+brew cask install wombat            # gRPC GUI client
 
 echo "Cleanup..."
 brew cleanup

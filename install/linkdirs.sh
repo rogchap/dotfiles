@@ -4,7 +4,10 @@ DF=$HOME/dotfiles
 
 echo "Creating symlinked directories..."
 
-links=("$DF/vim/")
+links="$DF/vim/"
+
+
+echo $links
 
 for d in $links; do
     t="$HOME/.$(basename $d)"
@@ -18,7 +21,7 @@ done
 
 echo "Creating symlinked config directories..."
 
-configs=("$DF/kitty/")
+configs="$DF/kitty/"
 
 for d in $configs; do
     t="$HOME/.config/$(basename $d)"
