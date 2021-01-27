@@ -25,6 +25,7 @@ if [[ -f "~/.gnupg/.gpg-agent-info" && -n "$(pgrep gpg-agent)" ]]; then
 else
   eval $(eval $(gpg-agent --daemon --options ~/.gnupg/gpg-agent.conf))
 fi
+export GPG_TTY=$(tty)
 
 # vim editor
 export TERM='xterm-256color'
