@@ -23,7 +23,7 @@ if [[ -f "~/.gnupg/.gpg-agent-info" && -n "$(pgrep gpg-agent)" ]]; then
   source ~/.gnupg/.gpg-agent-info
   export GPG_AGENT_INFO
 else
-  eval $(eval $(gpg-agent --daemon --options ~/.gnupg/gpg-agent.conf))
+  eval $(eval $(gpg-agent --daemon --options ~/.gnupg/gpg-agent.conf > /dev/null 2>&1))
 fi
 export GPG_TTY=$(tty)
 
