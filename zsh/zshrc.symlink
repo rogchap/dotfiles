@@ -72,6 +72,8 @@ alias ide="tmux split-window -h -d -p 66 'vim; zsh'; tmux split-window -v; tmux 
 alias g="git"
 alias gm="git checkout master && git pull"
 alias gn="git checkout -b"
+alias gc="git checkout"
+alias gmm="git merge master"
 
 alias v="vim"
 
