@@ -4,7 +4,7 @@
 which -s brew
 if [[ $? != 0 ]] ; then
     echo "Homebrew not found. Installing Homebrew..."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
     echo "Homebrew already installed. Updating..."
     brew update
@@ -46,15 +46,14 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 pip3 install pynvim                 # required for fzf.vim plugin
 
 echo "Installing casks..."
-brew cask install firefox           # internet browser
-brew cask install kitty             # terminal emulator
-brew cask install slack             # messaging client
-brew cask install spotify           # music client
-brew cask install docker 	        # *nix containers
-brew cask install 1password	        # password manager
-brew cask install dropbox           # shared files
-brew cask install aerial            # screensaver
-brew cask install wombat            # gRPC GUI client
+brew install --cask firefox         # internet browser
+brew install --cask kitty           # terminal emulator
+brew install --cask slack           # messaging client
+brew install --cask spotify         # music client
+brew install --cask docker 	        # *nix containers
+brew install --cask 1password	    # password manager
+brew install --cask aerial          # screensaver
+brew install --cask wombat          # gRPC GUI client
 
 echo "Cleanup..."
 brew cleanup
