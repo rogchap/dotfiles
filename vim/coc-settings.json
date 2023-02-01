@@ -1,8 +1,14 @@
 {
+    "coc.preferences.formatOnSaveFiletypes": [
+        "go",
+        "rust",
+        "typescript"
+    ],
     "coc.preferences.messageLevel": "error",
     "codeLens.enable": true,
     "go.goplsOptions": {
         "usePlaceholders": true,
         "gofumpt": true
-    }
+    },
+    "svelte.ask-to-enable-ts-plugin": false
 }

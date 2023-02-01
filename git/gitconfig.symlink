@@ -1,11 +1,11 @@
 [user]
     name = Roger Chapman
     email = rogchap@gmail.com
-	signingkey = FF4EF1E2D1D0BF18
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFl/bXxMTlkqSYde4Mak6N9QUXLE51uBfWdIPAUfBwHN
 [core]
     excludesfile = ~/.gitignore_global
-[url "ssh://git@github.com/"]
-    insteadOf = https://github.com/
+#[url "ssh://git@github.com/"]
+#    insteadOf = https://github.com/
 [push]
     default = current
 [pull]
@@ -14,5 +14,13 @@
 	gpgsign = true
 [gpg]
 	program = gpg
+	format = ssh
 [init]
 	defaultBranch = main
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign

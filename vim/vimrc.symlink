@@ -17,6 +17,11 @@ set nocompatible
 set autoread
 set signcolumn=yes
 
+" term colors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
+
 " folding
 set foldmethod=indent
 set foldcolumn=1
@@ -46,6 +51,8 @@ augroup END
 
 " theme styling
 let g:nord_cursor_line_number_background = 1
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
 colorscheme nord
 
 " show matching parenthesis
@@ -82,7 +89,15 @@ nnoremap <esc>^[ <esc>^[
 " lightline setting
 set laststatus=2
 set noshowmode
-let g:lightline = { 'colorscheme': 'nord' }
+let g:lightline = { 'colorscheme': 'nord', 'component_function': { 'filename': 'LLfilename' } }
+function! LLfilename()
+  let root = fnamemodify(get(b:, 'git_dir'), ':h')
+  let path = expand('%:p')
+  if path[:len(root)-1] ==# root
+    return path[len(root)+1:]
+  endif
+  return expand('%') 
+endfunction
 
 " fuzzy finding
 set rtp+=/usr/local/opt/fzf
