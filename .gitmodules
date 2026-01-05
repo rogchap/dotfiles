@@ -49,3 +49,6 @@
 [submodule "vim/pack/plugins/start/fzf"]
 	path = vim/pack/plugins/start/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "vim/pack/plugins/start/protobuf.vim"]
+	path = vim/pack/plugins/start/protobuf.vim
+	url = https://github.com/wfxr/protobuf.vim.git

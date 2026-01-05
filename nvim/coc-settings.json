@@ -1,0 +1,32 @@
+{
+  "suggest.noselect": false,
+  "diagnostic.errorSign": "✘",
+  "diagnostic.warningSign": "!",
+  "diagnostic.infoSign": "?",
+  "diagnostic.checkCurrentLine": true,
+  "coc.preferences.formatOnSave": true,
+  "coc.preferences.messageLevel": "error",
+  "hover.target": "float",
+  "go.goplsOptions": {
+    "gofumpt": true,
+    "staticcheck": true,
+    "usePlaceholders": true,
+    "completeUnimported": true,
+    "matcher": "Fuzzy"
+  },
+  "go.goplsArgs": ["-remote=auto"],
+  "flutter.autoOpenDevLog": true,
+  "flutter.autoHideDevLog": true,
+  "flutter.openDevLogSplitCommand": "botright 10split",
+  "languageserver": {
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
+    }
+  },
+  "svelte.enable-ts-plugin": false
+}

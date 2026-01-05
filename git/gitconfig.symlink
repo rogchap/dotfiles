@@ -4,6 +4,7 @@
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFl/bXxMTlkqSYde4Mak6N9QUXLE51uBfWdIPAUfBwHN
 [core]
     excludesfile = ~/.gitignore_global
+	autocrlf = input
 #[url "ssh://git@github.com/"]
 #    insteadOf = https://github.com/
 [push]

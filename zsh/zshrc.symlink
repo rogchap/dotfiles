@@ -31,6 +31,8 @@ export GPG_TTY=$(tty)
 export TERM='xterm-256color'
 export EDITOR='vim'
 
+export BAT_THEME="Nord"
+
 # VIM Mode
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
@@ -53,7 +55,7 @@ function note() {
 }
 
 function gotest() {
-      go test $* | sed ''/PASS/s//$(printf "\033[32mPASS\033[0m")/'' | sed ''/SKIP/s//$(printf "\033[34mSKIP\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/'' | GREP_COLOR="01;33" egrep --color=always '\s*[a-zA-Z0-9\-_.]+[:][0-9]+[:]|^'
+      go test $* | sed ''/PASS/s//$(printf "\033[32mPASS\033[0m")/'' | sed ''/SKIP/s//$(printf "\033[34mSKIP\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/'' | GREP_COLOR="01;33" egrep --color=always '\s*[a-zA-Z0-9_.-]+[:][0-9]+[:]|^'
 }
 
 function chpwd() {
@@ -67,15 +69,18 @@ alias reload!='source ~/.zshrc'
 alias t="tmux"
 alias tn='tmux new-session -s ${${PWD##*/}:gs/\./-}'
 alias ta="tmux attach"
-alias ide="tmux split-window -h -d -p 66 'vim; zsh'; tmux split-window -v; tmux rename-window code; tmux select-pane -t 2"
+alias tnt="tmux run-shell \"~/.tmux/plugins/treemux/scripts/toggle.sh 'nvim,~/.tmux/plugins/treemux/configs/treemux_init.lua,,/usr/bin/python3,left,40,top,70%,editor,0.5,2,@treemux-refresh-interval-inactive-window,0,,nvim-tree' '#{pane_id}'\""
+alias ide="tmux split-window -h -d -p 30 'claude'; tmux split-window -v -d -p 30; tmux select-pane -t 1; tmux split-window -h; tmux rename-window ide; tmux select-pane -t 0; tmux send-keys 'nvim' Enter; tnt"
 
 alias g="git"
-alias gm="git checkout master && git pull"
+# alias gm="git checkout master && git pull"
+alias gm='(git rev-parse --verify refs/heads/main >/dev/null 2>&1 && git checkout main || (git ls-remote --heads origin main | grep -q main && git checkout main || git checkout master)) && git pull'
 alias gn="git checkout -b"
 alias gc="git checkout"
 alias gmm="git merge master"
 
-alias v="vim"
+alias v="nvim"
+alias vim="nvim"
 
 alias firefox="open -a $APP/firefox.app"
 alias spotify="open -a $APP/spotify.app"
@@ -84,9 +89,11 @@ alias slack="open -a $APP/slack.app"
 export GO=/usr/local/go
 export GOPATH=$HOME/go
 export CARGO=$HOME/.cargo
-export PATH=$GO/bin:$GOPATH/bin:$CARGO/bin:$HOME/bin:$PATH
+export FLUTTER=/Library/Flutter
+export PATH=$GO/bin:$GOPATH/bin:$CARGO/bin:$FLUTTER/bin:$HOME/bin:$PATH
 
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"

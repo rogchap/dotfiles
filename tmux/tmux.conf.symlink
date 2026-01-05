@@ -38,7 +38,13 @@ set -g @continuum-boot-options 'iterm'
 
 # Key bindings
 bind | split-window -h -c "#{pane_current_path}"
+bind \\ split-window -h -c "#{pane_current_path}"
 bind - split-window -v -c "#{pane_current_path}"
+bind _ split-window -v -c "#{pane_current_path}"
+
+# treemux options
+set -g @treemux-tree-client 'nvim-tree'
+set -g @treemux-tree-nvim-init-file '~/.tmux/plugins/treemux/configs/treemux_init.lua'
 
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'
@@ -48,6 +54,7 @@ set -g @plugin 'tmux-plugins/tmux-prefix-highlight'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'tmux-plugins/tmux-cpu'
+set -g @plugin 'kiyoon/treemux'
 
 # Color theme
 set -g @plugin "arcticicestudio/nord-tmux"

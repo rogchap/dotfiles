@@ -33,7 +33,7 @@ brew install node                   # Node.js and npm
 brew install python                 # Python 3 and pip
 brew install the_silver_searcher    # code searching tool
 brew install tmux                   # terminal multiplexer
-brew install vim                    # text/code editor that rocks
+brew install neovim                 # text/code editor that rocks
 brew install zsh                    # the only shell you need
 brew install grip                   # preview github flavoured markdown
 brew install github/gh/gh           # GitHub CLI
@@ -49,11 +49,11 @@ echo "Installing casks..."
 brew install --cask firefox         # internet browser
 brew install --cask kitty           # terminal emulator
 brew install --cask slack           # messaging client
-brew install --cask spotify         # music client
 brew install --cask docker 	        # *nix containers
 brew install --cask 1password	    # password manager
 brew install --cask aerial          # screensaver
-brew install --cask wombat          # gRPC GUI client
+brew install --cask claude          # AI desktop app
+brew install --cask claude-code     # AI coding assistant
 
 echo "Cleanup..."
 brew cleanup
