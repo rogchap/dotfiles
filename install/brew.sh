@@ -46,13 +46,14 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 pip3 install pynvim                 # required for fzf.vim plugin
 
 echo "Installing casks..."
-brew install --cask firefox         # internet browser
-brew install --cask kitty           # terminal emulator
-brew install --cask slack           # messaging client
-brew install --cask docker 	        # *nix containers
-brew install --cask 1password	    # password manager
-brew install --cask claude          # AI desktop app
-brew install --cask claude-code     # AI coding assistant
+brew install --cask firefox                 # internet browser
+brew install --cask kitty                   # terminal emulator
+brew install --cask slack                   # messaging client
+brew install --cask docker 	                # *nix containers
+brew install --cask 1password	            # password manager
+brew install --cask claude                  # AI desktop app
+brew install --cask claude-code             # AI coding assistant
+brew install --cask git-credential-manager  # Git credential storage
 
 echo "Cleanup..."
 brew cleanup
