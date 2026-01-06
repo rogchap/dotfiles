@@ -51,7 +51,6 @@ brew install --cask kitty           # terminal emulator
 brew install --cask slack           # messaging client
 brew install --cask docker 	        # *nix containers
 brew install --cask 1password	    # password manager
-brew install --cask aerial          # screensaver
 brew install --cask claude          # AI desktop app
 brew install --cask claude-code     # AI coding assistant
 
