@@ -69,7 +69,7 @@ alias reload!='source ~/.zshrc'
 alias t="tmux"
 alias tn='tmux new-session -s ${${PWD##*/}:gs/\./-}'
 alias ta="tmux attach"
-alias tnt="tmux run-shell \"~/.tmux/plugins/treemux/scripts/toggle.sh 'nvim,~/.tmux/plugins/treemux/configs/treemux_init.lua,,/usr/bin/python3,left,40,top,70%,editor,0.5,2,@treemux-refresh-interval-inactive-window,0,,nvim-tree' '#{pane_id}'\""
+alias tnt="tmux run-shell \"~/.tmux/plugins/treemux/scripts/toggle.sh 'nvim,~/dotfiles/tmux/treemux_init.lua,,/usr/bin/python3,left,40,top,70%,editor,0.5,2,@treemux-refresh-interval-inactive-window,0,,nvim-tree' '#{pane_id}'\""
 alias ide="tmux split-window -h -d -p 30 'claude'; tmux split-window -v -d -p 30; tmux select-pane -t 1; tmux split-window -h; tmux rename-window ide; tmux select-pane -t 0; tmux send-keys 'nvim' Enter; tnt"
 
 alias g="git"

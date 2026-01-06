@@ -44,7 +44,7 @@ bind _ split-window -v -c "#{pane_current_path}"
 
 # treemux options
 set -g @treemux-tree-client 'nvim-tree'
-set -g @treemux-tree-nvim-init-file '~/.tmux/plugins/treemux/configs/treemux_init.lua'
+set -g @treemux-tree-nvim-init-file '~/dotfiles/tmux/treemux_init.lua'
 
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'
