@@ -122,6 +122,12 @@ endfunction
 nnoremap <Leader>t :FZF<CR>
 nnoremap <Leader>f :Ag<CR>
 
+" lazygit in tmux popup
+function! OpenLazygit()
+  silent !tmux display-popup -d '\#{pane_current_path}' -w90\% -h90\% -E lazygit
+endfunction
+nnoremap <Leader>g :call OpenLazygit()<CR>
+
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 let g:ackprg = 'ag --vimgrep'
 command! -bang -nargs=* Ag
@@ -178,6 +184,7 @@ let g:go_fmt_command = "goimports"
 let g:go_auto_sameids = 0
 
 " coc.nvim settings
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-go', 'coc-protobuf']
 let g:coc_disable_uncaught_error = 1
 set nobackup
 set nowritebackup
