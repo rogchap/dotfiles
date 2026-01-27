@@ -4,7 +4,7 @@ DF=$HOME/dotfiles
 
 echo "Creating symlinked config directories..."
 
-configs="$DF/kitty/ $DF/nvim/"
+configs="$DF/kitty/ $DF/nvim/ $DF/opencode"
 
 for d in $configs; do
     t="$HOME/.config/$(basename $d)"

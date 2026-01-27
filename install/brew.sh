@@ -39,6 +39,7 @@ brew install grip                   # preview github flavoured markdown
 brew install github/gh/gh           # GitHub CLI
 brew install gnupg                  # Privacy Guard
 brew install pinentry-mac           # Secure PIN entry for PGP
+brew install anomalyco/tap/opencode # AI coding agent
 
 # configuration for zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -52,7 +53,6 @@ brew install --cask slack                   # messaging client
 brew install --cask docker 	                # *nix containers
 brew install --cask 1password	            # password manager
 brew install --cask claude                  # AI desktop app
-brew install --cask claude-code             # AI coding assistant
 brew install --cask git-credential-manager  # Git credential storage
 
 echo "Cleanup..."
