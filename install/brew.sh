@@ -40,6 +40,7 @@ brew install github/gh/gh           # GitHub CLI
 brew install gnupg                  # Privacy Guard
 brew install pinentry-mac           # Secure PIN entry for PGP
 brew install anomalyco/tap/opencode # AI coding agent
+brew install lm-studio              # Local AI Models
 
 # configuration for zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
